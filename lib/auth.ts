@@ -4,7 +4,7 @@ import dbConnect from './mongodb';
 import User from '@/models/User';
 
 export async function getUserFromToken() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const token = cookieStore.get('token')?.value;
 
   if (!token) {

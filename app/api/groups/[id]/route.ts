@@ -6,7 +6,7 @@ import { getUserFromToken } from '@/lib/auth';
 
 export async function GET(
   request: NextRequest,
-  context: any
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const params = await context.params;
@@ -44,7 +44,7 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  context: any
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const params = await context.params;
@@ -78,7 +78,7 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  context: any
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const params = await context.params;

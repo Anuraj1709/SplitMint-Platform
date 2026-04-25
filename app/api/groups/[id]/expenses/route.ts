@@ -6,7 +6,7 @@ import { getUserFromToken } from '@/lib/auth';
 
 export async function POST(
   request: NextRequest,
-  context: any
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const params = await context.params;
