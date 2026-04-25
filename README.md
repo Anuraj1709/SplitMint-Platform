@@ -40,6 +40,20 @@ A full-stack expense splitting application built with Next.js, TypeScript, Mongo
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+## Deployment
+
+### Vercel Deployment
+
+1. Connect your GitHub repository to Vercel
+2. Add environment variables in Vercel dashboard:
+   - `MONGODB_URI`: Your MongoDB connection string (use MongoDB Atlas for production)
+   - `JWT_SECRET`: A strong random string for JWT signing
+3. Deploy
+
+### Environment Variables
+
+See `.env.example` for required environment variables.
+
 ## Project Structure
 
 - `app/` - Next.js app router pages and API routes
