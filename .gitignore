@@ -22,6 +22,16 @@
 
 # misc
 .DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# environment variables
+.env*
+!.env.example
+/build
+
+# misc
+.DS_Store
 *.pem
 
 # debug

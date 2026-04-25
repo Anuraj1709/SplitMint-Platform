@@ -6,9 +6,10 @@ import { getUserFromToken } from '@/lib/auth';
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: any
 ) {
   try {
+    const params = await context.params;
     const user = await getUserFromToken();
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
